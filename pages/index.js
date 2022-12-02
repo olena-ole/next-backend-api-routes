@@ -7,9 +7,11 @@ function HomePage() {
 
   function submitFormHandler(e) {
     e.preventDefault()
-    
+
     const enteredEmail = emailInputRef.current.value
     const enteredFeedback = feedbackInputRef.current.value
+
+    fetch() // {email: 'some@email.com', text: 'Some feedback'}
   }
 
   return (
