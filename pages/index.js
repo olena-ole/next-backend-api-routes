@@ -18,7 +18,7 @@ function HomePage() {
       text: enteredFeedback
     }
 
-    fetch('/api/feedback', {
+    fetch('/api/feedback/', {
       method: 'POST',
       body: JSON.stringify(reqBody),
       headers: {
@@ -26,11 +26,11 @@ function HomePage() {
       }
     })
       .then(res => res.json())
-      .then(data => set(data))
+      .then(data => console.log(data))
   }
 
   function loadFeedbackHandler() {
-    fetch('/api/feedback')
+    fetch('/api/feedback/')
       .then(res => res.json())
       .then(data => setFeedbackItems(data.feedback))
   }
